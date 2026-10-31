@@ -1,0 +1,17 @@
+# Samsung Q95T (QE75Q95TATXXC, firmware T-NKMDEUC-2743.0) - verification hashes
+# Check your unit BEFORE attempting anything: if your live file does not match
+# the vendor original below, the documented patch does NOT apply to you.
+
+File: /etc/profile.d/bash_prompt_custom.sh (776 bytes)
+Loader marker: alias lr="ls -ltrZ" at file offset 629
+
+vendor original sha256: effe97f8ec948a15962fc8a1b85a4e1e446352b8c5caae703e1ed0684425e33c
+patched file sha256:    965f0663749cab0412ba5e56e5e29f2b31f313bad52eceb80fa1464938dcb4f1
+
+Rootfs A/B slots observed on this unit:
+  /dev/mmcblk0p18 - stale copy (write + restore confirmed it is not the live slot)
+  /dev/mmcblk0p19 - live slot (the filesystem serves the patched file after the raw block swap)
+
+Note: the patched file itself is NOT distributed here (it derives from a
+Samsung-shipped file). These hashes let you verify your unit's compatibility
+and confirm a successful patch.
